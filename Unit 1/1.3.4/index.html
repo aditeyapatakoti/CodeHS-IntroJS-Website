@@ -8,7 +8,7 @@
       border: 1px solid #999;
       display: block;
       padding: 20px;
-      white-space: pre-line; /* Preserve line breaks */
+      font-family: monospace; /* Use a monospaced font for proper indentation */
     }
   </style>
 </head>
@@ -30,9 +30,9 @@
     putBall();
     turnLeft();
     function turnRight() {
-        for (var i = 0; i < 3; i++) {
-            turnLeft();
-        }
+      for (var i = 0; i < 3; i++) {
+        turnLeft();
+      }
     }
   </code>
 </pre>
