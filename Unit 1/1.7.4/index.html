@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1.7.4 | Unit 1 | IIJS | CodeHS</title>
+  <style>
+    pre code {
+      background-color: #eee;
+      border: 1px solid #999;
+      display: block;
+      padding: 20px;
+      font-family: monospace;
+    }
+    </style>
+</head>
+<body>
+
+<h1>1.7.4 The Two Towers + Comments</h1>
+
+<pre>
+  <code>
+    //starts the program
+    function start() {
+        move();
+        turnLeft();
+        makePancakes();
+        move();
+        move();
+        turnLeft();
+        makePancakes();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnRight();
+    }
+
+    //function is used to make the dog turn around
+    function turnAround() {
+        turnLeft();
+        turnLeft();
+    }
+
+    //function is used to put three balls in each of the columns accordingly.
+    function makePancakes() {
+        putBall();
+        move();
+        putBall();
+        move();
+        putBall();
+        turnAround();
+        move();
+        move();
+        turnLeft();
+    }
+
+    function turnRight() {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+  </code>
+</pre>
+
+<a href="/">Home Page</a>
+
+</body>
+</html>
