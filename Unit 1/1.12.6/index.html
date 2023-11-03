@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1.12.6 | Unit 1 | IIJS | CodeHS</title>
+  <style>
+    pre code {
+      background-color: #eee;
+      border: 1px solid #999;
+      display: block;
+      padding: 20px;
+      font-family: monospace;
+    }
+    </style>
+</head>
+<body>
+
+<h1>1.12.6 Big Tower</h1>
+
+<pre>
+  <code>
+/* This program draws a big tower from Karel's starting spot */
+function start() {
+    while (facingSouth()) {
+        turnAround();
+    }
+    while (facingWest()) {
+        turnRight();
+    }
+    while (facingEast()) {
+        turnLeft();
+    }
+    while (frontIsClear()) {
+        putBall();
+        move();
+    }
+    if (noBallsPresent()) {
+        putBall();
+    }
+}
+
+function a() {
+    move();
+}
+
+function b() {
+    move();
+}
+
+function c() {
+    move();
+}
+  </code>
+</pre>
+
+<a href="/">Home Page</a>
+
+</body>
+</html>
