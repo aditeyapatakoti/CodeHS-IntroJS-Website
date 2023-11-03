@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1.15.4 | Unit 1 | IIJS | CodeHS</title>
+  <style>
+    pre code {
+      background-color: #eee;
+      border: 1px solid #999;
+      display: block;
+      padding: 20px;
+      font-family: monospace;
+    }
+    </style>
+</head>
+<body>
+
+<h1>1.15.4 Diagonal</h1>
+
+<pre>
+  <code>
+/* This program has Karel lay a diagonal row of tennis balls.
+ * However, the indenting is all wrong. Can you properly
+ * indent this program? */
+function start() {
+    // Loop will keep Karel building a diagonal path of balls
+    // until the final wall is reached.
+    while (frontIsClear()) {
+        putBall();
+        move();
+        turnLeft();
+        move();
+        for (var i = 0; i < 3; i++) {
+            turnLeft();
+        }
+    }
+    putBall();
+}
+  </code>
+</pre>
+
+<a href="/">Home Page</a>
+
+</body>
+</html>
