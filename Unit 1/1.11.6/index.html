@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1.11.6 | Unit 1 | IIJS | CodeHS</title>
+  <style>
+    pre code {
+      background-color: #eee;
+      border: 1px solid #999;
+      display: block;
+      padding: 20px;
+      font-family: monospace;
+    }
+    </style>
+</head>
+<body>
+
+<h1>1.11.6 Right vs. Left Square</h1>
+
+<pre>
+  <code>
+    function start() {
+        if (facingEast()) {
+            makeLeftSquare();
+        } else {
+            makeRightSquare();
+        }
+    }
+    
+    function makeLeftSquare() {
+        for (var i = 0; i < 4; i++) {
+            putBall();
+            move();
+            turnLeft();
+        }
+    }
+    
+    function makeRightSquare() {
+        for (var i = 0; i < 4; i++) {
+            putBall();
+            move();
+            turnRight();
+        }
+    }
+  </code>
+</pre>
+
+<a href="/">Home Page</a>
+
+</body>
+</html>
