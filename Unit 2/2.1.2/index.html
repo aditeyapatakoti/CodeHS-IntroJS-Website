@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2.1.2 | Unit 1 | IIJS | CodeHS</title>
+  <style>
+    pre code {
+      background-color: #eee;
+      border: 1px solid #999;
+      display: block;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>2.1.2 Racing Karel</h1>
+
+<pre>
+  <code>
+/* This program will have Karel run around the racetrack
+* 8 times. */
+function start() {
+    for(var i = 0; i < 3; i++){
+        line();
+        turnLeft();
+    }
+    while (frontIsClear()){
+        move();
+    }
+    turnLeft();
+}    
+function line(){
+    if (noBallsPresent()){
+        for(var i = 0; i < 8; i++){
+            putBall();
+        }
+    }
+    while (frontIsClear()){
+        move();
+    }
+    if (noBallsPresent()){
+        for(var i = 0; i < 8; i++){
+            putBall();
+        }
+    }
+}
+function random(){
+    move();
+}
+  </code>
+</pre>
+
+<a href="/">Home Page</a>
+
+</body>
+</html>
