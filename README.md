@@ -1,6 +1,7 @@
 # CodeHS-IntroJS-Website
 [The official website for CodeHS's Intro Into Javascript.](https://iijscodehs.netlify.app/)
-https://iijscodehs.netlify.app/
+
+Main website link: https://iijscodehs.netlify.app/
 
 
 Note: This is a website version of my git repo "[CodeHS-IntroIntoJavascript](https://github.com/aditeyapatakoti/CodeHS-IntroIntoJavascript)" incase github is not unblocked on your computer.
