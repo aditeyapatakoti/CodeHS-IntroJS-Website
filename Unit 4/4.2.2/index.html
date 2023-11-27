@@ -18,66 +18,72 @@
 
 <pre>
   <code>
-// Constants for main ghost body
-var HEAD_RADIUS = 70;
-var BODY_WIDTH = HEAD_RADIUS * 2;
-var BODY_HEIGHT = 120;
-var NUM_FEET = 3;
-var FOOT_RADIUS = (BODY_WIDTH) / (NUM_FEET * 2);
-var BODY_COLOR = Color.red;
+//constant variables
+var PAN_RADIUS = getWidth()/3;
+var HANDLE_WIDTH = getWidth()/2;
+var HANDLE_HEIGHT = HANDLE_WIDTH/4;
+var PAN_COLOR = Color.GRAY;
 
-// Constants for eyes
-var PUPIL_RADIUS = 8;
-var PUPIL_LEFT_OFFSET = 16;
-var PUPIL_RIGHT_OFFSET = 40;
-var EYE_RADIUS = 20;
-var EYE_OFFSET = 28;
-var EYE_COLOR = Color.white;
-var PUPIL_COLOR = Color.blue;
+var PAN_BOTTOM_RADIUS = PAN_RADIUS-20;
+var PAN_BOTTOM_COLOR = Color.BLACK;
 
-/* This program draws a ghost on the canvas. */
-function start(){
-    var centerX = getWidth()/2;
-    var centerY = getHeight()/2;
-    drawGhost(centerX,centerY, Color.red);
-    var footMiddle = new Circle(FOOT_RADIUS);
-    footMiddle.setColor(Color.RED);
-    add(footMiddle);
-    var foot2 = new Circle(FOOT_RADIUS);
-    foot2.setPosition(centerX + FOOT_RADIUS*2, centerY + BODY_HEIGHT + FOOT_RADIUS/8);
-    foot2.setColor(Color.RED);
-    add(foot2);
-    var foot3 = new Circle(FOOT_RADIUS);
-    foot3.setPosition(centerX - FOOT_RADIUS*2, centerY + BODY_HEIGHT + FOOT_RADIUS/8);
-    foot3.setColor(Color.RED);
-    add(foot3);
-}
-//function which basically draws the ghost.
-function drawGhost(centerX, centerY, color){
-    drawBody(centerX, centerY, color);
-    drawEye(centerX-EYE_OFFSET, centerY);
-    drawEye(centerX+EYE_OFFSET, centerY);
-}
-//function draws eye
-function drawEye(x,y){
-    drawCircle(x, y, EYE_RADIUS, Color.white);
-    drawCircle(x+PUPIL_LEFT_OFFSET, y, PUPIL_RADIUS, Color.blue);
-}
-function drawBody(x,y,col){
-    drawCircle(x,y,HEAD_RADIUS,col);
-    drawRect(x-HEAD_RADIUS, y, BODY_WIDTH, BODY_HEIGHT, col);
-}
-function drawCircle(x,y,rad,col){
-    var circle = new Circle(rad);
-    circle.setPosition(x,y);
-    circle.setColor(col);
-    add(circle);
-}
-function drawRect(x,y,w,h,col){
-    var rect = new Rectangle(w,h);
-    rect.setPosition(x,y);
-    rect.setColor(col);
-    add(rect);
+var EGG_RADIUS = PAN_BOTTOM_RADIUS/4;
+var EGG_WHITE_COLOR = Color.WHITE;
+var EGG_YOLK_COLOR = Color.YELLOW; 
+
+var HIGHLIGHT_RADIUS = EGG_RADIUS/4;
+var HIGHLIGHT_COLOR = Color.WHITE;
+
+//start function
+function start() {
+//code for the pan (the cirlce part of it)
+var mainPan = new Circle(getWidth()/3);
+mainPan.setColor(Color.GRAY);
+mainPan.setPosition(200,250);
+add(mainPan);
+//code for the pan (the hande)
+var centerX = getWidth()/2 ;
+var centerY = getHeight()/2 ;
+var panHandle = new Rectangle(centerX, HANDLE_WIDTH/4) ;
+panHandle.setColor(Color.GRAY);
+panHandle.setPosition(200,220);
+add(panHandle);
+var blackCircle = new Circle(PAN_RADIUS-20);
+blackCircle.setColor(Color.BLACK);
+blackCircle.setPosition(200,250);
+add(blackCircle);
+var circleG = new Circle(PAN_BOTTOM_RADIUS/4);
+circleG.setColor(Color.WHITE);
+circleG.setPosition(150,250);
+add(circleG);
+var circleH = new Circle(PAN_BOTTOM_RADIUS/4);
+circleH.setColor(Color.WHITE);
+circleH.setPosition(180,280);
+add(circleH);
+var circleJ = new Circle(PAN_BOTTOM_RADIUS/4);
+circleJ.setColor(Color.WHITE);
+circleJ.setPosition(220,260);
+add(circleJ);
+var circleK = new Circle(PAN_BOTTOM_RADIUS/4);
+circleK.setColor(Color.WHITE);
+circleK.setPosition(180,220);
+add(circleK);
+var circleL = new Circle(PAN_BOTTOM_RADIUS/4);
+circleL.setColor(Color.WHITE);
+circleL.setPosition(220,220);
+add(circleL);
+var circleZ = new Circle(PAN_BOTTOM_RADIUS/4);
+circleZ.setColor(Color.WHITE);
+circleZ.setPosition(190,250);
+add(circleZ);
+var circleC = new Circle(PAN_BOTTOM_RADIUS/4);
+circleC.setColor(Color.YELLOW);
+circleC.setPosition(190,250);
+add(circleC);
+var circleV = new Circle(EGG_RADIUS/4);
+circleV.setColor(Color.WHITE);
+circleV.setPosition(200,240);
+add(circleV);
 }
   </code>
 </pre>
