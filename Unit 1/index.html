@@ -1,61 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="/unitstyle.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 1 | IIJS | CodeHS</title>
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Please note:</h1>
-    <p>This is all original code and in some assingments you may need to change some things according to you.</p>
-    <p> To copy any of the code just drag from the top line to the bottom line (the very very top), this way you will be able to copy all the indents and other stuff that you need to get the assignment done with no errors.</p>
-    <h2>Unit 1:</h2>
-    <ul class="sitelist">
-        <li><a href="./1.1.2/">1.1.2 Quiz Karel Commands</a></li>
-        <li><a href="./1.1.4/">1.1.4 Your First Karel Program</a></li>
-        <li><a href="./1.1.5/">1.1.5 Short Stack</a></li>
-        <li><a href="./1.2.2/">1.2.2 More Basic Karel Quiz</a></li>
-        <li><a href="./1.2.4/">1.2.4 Make a Tower</a></li>
-        <li><a href="./1.2.5/">1.2.5 Pyramid of Karel</a></li>
-        <li><a href="./1.3.2/">1.3.2 Karel Can't Turn Right Quiz</a></li>
-        <li><a href="./1.3.4/">1.3.4 Slide Karel</a></li>
-        <li><a href="./1.3.5/">1.3.5 Fireman Karel</a></li>
-        <li><a href="./1.4.2/">1.4.2 Functions in Karel Quiz</a></li>
-        <li><a href="./1.4.4/">1.4.4 Pancakes</a></li>
-        <li><a href="./1.4.5/">1.4.5 Mario Karel</a></li>
-        <li><a href="./1.5.2/">1.5.2 The Start Function Quiz</a></li>
-        <li><a href="./1.5.4/">1.5.4 Pancakes with Start</a></li>
-        <li><a href="./1.6.2/">1.6.2 Top Down Design and Decomposition Quiz</a></li>
-        <li><a href="./1.6.4/">1.6.4 The Two Towers</a></li>
-        <li><a href="./1.7.2/">1.7.2 Commenting Your Code Quiz</a></li>
-        <li><a href="./1.7.4/">1.7.4 The Two Towers + Comments</a></li>
-        <li><a href="./1.8.2/">1.8.2 Super Karel Quiz</a></li>
-        <li><a href="./1.8.4/">1.8.4 The Two Towers + SuperKarel</a></li>
-        <li><a href="./1.9.2/">1.9.2 For Loops Quiz</a></li>
-        <li><a href="./1.9.5/">1.9.5 Take 'em All</a></li>
-        <li><a href="./1.9.6/">1.9.6 Dizzy Karel</a></li>
-        <li><a href="./1.9.7/">1.9.7 Ball in Each Corner</a></li>
-        <li><a href="./1.9.8/">1.9.8 Lots of Hurdles</a></li>
-        <li><a href="./1.10.2/">1.10.2 If Statements Quiz</a></li>
-        <li><a href="./1.10.5/">1.10.5 Is There a Ball?</a></li>
-        <li><a href="./1.10.6/">1.10.6 Don't Crash!</a></li>
-        <li><a href="./1.11.2/">1.11.2 If/Else Statements Quiz</a></li>
-        <li><a href="./1.11.5/">1.11.5 Right Side Up</a></li>
-        <li><a href="./1.11.6/">1.11.6 Right vs. Left Square</a></li>
-        <li><a href="./1.12.2/">1.12.2 While Loops in Karel Quiz</a></li>
-        <li><a href="./1.12.4/">1.12.4 Follow The Yellow Ball Road</a></li>
-        <li><a href="./1.12.5/">1.12.5 Lay Row of Tennis Balls</a></li>
-        <li><a href="./1.12.6/">1.12.6 Big Tower</a></li>
-        <li><a href="./1.13.2/">1.13.2 Control Structures Example Quiz</a></li>
-        <li><a href="./1.13.4/">1.13.4 Random Hurdles</a></li>
-        <li><a href="./1.14.2/">1.14.2 Quiz Which Control Structure?</a></li>
-        <li><a href="./1.15.2/">1.15.2 How to Indent Your Code Quiz</a></li>
-        <li><a href="./1.15.4/">1.15.4 Diagonal</a></li>
-        <li><a href="./1.15.5/">1.15.5 Staircase</a></li>
-        <li><a href="./1.16.1/">1.16.1 Programming with Karel Quiz</a></li>
-    </ul>
-    <a href="/">Home Page</a>
+<form>
+    <label for="pswd">Hmm... Nice try accessing it this way but you still have to enter the password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "Aditeya@09";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="main.html";
+        }
+        else{
+            alert("Incorrect Password.");
+        }
+    }
+</script>
 </body>
 </html>
