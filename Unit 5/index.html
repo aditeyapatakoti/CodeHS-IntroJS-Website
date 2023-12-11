@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="/unitstyle.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 5 | IIJS | CodeHS</title>
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Please note:</h1>
-    <p>This is all original code and in some assingments you may need to change some things according to you.</p>
-    <p> To copy any of the code just drag from the top line to the bottom line (the very very top), this way you will be able to copy all the indents and other stuff that you need to get the assignment done with no errors.</p>
-    <h2>Unit 5:</h2>
-    <ul class="sitelist">
-        <li><a href="./5.1.2/">5.1.2 Booleans Quiz</a></li>
-    </ul>
-    <a href="/">Home Page</a>
+<form>
+    <label for="pswd">Hmm... Nice try accessing it this way but you still have to enter the password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "Aditeya@09";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="main.html";
+        }
+        else{
+            alert("Incorrect Password.");
+        }
+    }
+</script>
 </body>
 </html>
