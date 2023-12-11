@@ -1,4 +1,0 @@
-AuthType Basic 
-AuthName "My Protected Folder" 
-AuthUserFile /workspaces/CodeHS-IntroJS-Website/.htpasswd 
-require valid-user
