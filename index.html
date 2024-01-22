@@ -17,8 +17,9 @@
 <script type="text/javascript">
     function checkPswd() {
         var confirmPassword = "Aditeya@09";
+        var otherPassword = "test";
         var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
+        if (password == confirmPassword || password == otherPassword) {
              window.location="main.html";
         }
         else{
